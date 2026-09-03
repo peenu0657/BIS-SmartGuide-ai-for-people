@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIS SmartGuide AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#consumer">Consumer</a>
+    <a href="#industry">Industry</a>
+    <a href="#dataset">Dataset</a>
+    <a href="#about">About</a>
+
+    <button id="themeToggle" class="theme-toggle">
+        🌙
+    </button>
+</div>
+
+
+    <!-- HOME SECTION -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Your AI Assistant for
+                <span>Indian Standards</span>
+                and BIS Services
+            </h1>
+
+            <p>
+                Get simple guidance about BIS standards,
+                ISI marks, certifications, hallmarking
+                and industry compliance.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#consumer" class="primary-btn">
+                    👤 Consumer Portal
+                </a>
+
+                <a href="#industry" class="secondary-btn">
+                    🏭 Industry Portal
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="ai-card">
+
+            <div class="robot">
+                🤖
+            </div>
+
+            <h2>BIS SmartGuide AI</h2>
+
+            <p>
+                Ask. Understand. Comply.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- HOW IT WORKS -->
+
+    <section class="how-it-works">
+
+        <h2>How It Works</h2>
+
+        <div class="flow-container">
+
+            <div class="flow-card">
+                <div class="emoji">❓</div>
+                <h3>Ask a Question</h3>
+                <p>Ask your question naturally.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-card">
+                <div class="emoji">🧠</div>
+                <h3>AI Understands</h3>
+                <p>The assistant understands your query.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-card">
+                <div class="emoji">🔎</div>
+                <h3>Finds Information</h3>
+                <p>Searches available knowledge.</p>
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-card">
+                <div class="emoji">💬</div>
+                <h3>Simple Answer</h3>
+                <p>Get easy-to-understand guidance.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONSUMER PORTAL -->
+
+    <section id="consumer" class="section">
+
+        <div class="section-heading">
+
+            <h1>👤 Consumer Portal</h1>
+
+            <p>
+                Get simple answers about BIS,
+                ISI marks, product quality and hallmarking.
+            </p>
+
+        </div>
+
+
+        <!-- CHATBOT -->
+
+        <div class="chatbot">
+
+            <div class="chat-header">
+
+                <div class="chat-icon">🤖</div>
+
+                <div>
+                    <h3>BIS SmartGuide AI</h3>
+                    <p>Consumer Assistant</p>
+                </div>
+
+            </div>
+
+
+            <div id="consumerMessages" class="chat-messages">
+
+                <div class="message ai-message">
+
+                    Hello! 👋 I am your BIS SmartGuide AI.
+
+                    Ask me about:
+
+                    • BIS certification<br>
+                    • ISI marks<br>
+                    • Hallmarking<br>
+                    • Product quality
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="consumerInput"
+                    placeholder="Ask your BIS question..."
+                >
+
+                <button onclick="sendConsumerMessage()">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <h2 class="sub-heading">
+            Consumer Services
+        </h2>
+
+
+        <div class="card-grid">
+
+            <div class="info-card">
+
+                <div class="card-icon">🏷️</div>
+
+                <h3>Understand ISI Mark</h3>
+
+                <p>
+                    Learn what the ISI mark means
+                    and why product standards matter.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-icon">🔍</div>
+
+                <h3>Check Certification</h3>
+
+                <p>
+                    Understand BIS certification
+                    information for products.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-icon">💎</div>
+
+                <h3>Hallmark Information</h3>
+
+                <p>
+                    Learn about jewellery
+                    hallmarking and quality.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-icon">❓</div>
+
+                <h3>Frequently Asked Questions</h3>
+
+                <p>
+                    Get answers to common
+                    BIS-related questions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <h2 class="sub-heading">
+            Popular Questions
+        </h2>
+
+
+        <div class="question-buttons">
+
+            <button onclick="askConsumerQuestion('What is BIS certification?')">
+                What is BIS certification?
+            </button>
+
+            <button onclick="askConsumerQuestion('What is an ISI mark?')">
+                What is an ISI mark?
+            </button>
+
+            <button onclick="askConsumerQuestion('What is hallmarking?')">
+                What is hallmarking?
+            </button>
+
+            <button onclick="askConsumerQuestion('How do I apply for certification?')">
+                How do I apply for certification?
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- INDUSTRY PORTAL -->
+
+    <section id="industry" class="section industry-section">
+
+        <div class="section-heading">
+
+            <h1>🏭 Industry Portal</h1>
+
+            <p>
+                Smart guidance for manufacturers,
+                MSMEs, startups and businesses.
+            </p>
+
+        </div>
+
+
+
+        <!-- STANDARD FINDER -->
+
+        <div class="standard-finder">
+
+            <h2>🔎 Smart Standard Finder</h2>
+
+            <p>
+                Enter your product name to get
+                prototype compliance guidance.
+            </p>
+
+
+            <div class="search-area">
+
+                <input
+                    type="text"
+                    id="productInput"
+                    placeholder="Example: Electric Iron"
+                >
+
+                <button onclick="findStandard()">
+                    Search
+                </button>
+
+            </div>
+
+
+            <div class="example-products">
+
+                <p>Try examples:</p>
+
+                <button onclick="setProduct('LED Light')">
+                    LED Light
+                </button>
+
+                <button onclick="setProduct('Electric Iron')">
+                    Electric Iron
+                </button>
+
+                <button onclick="setProduct('Pressure Cooker')">
+                    Pressure Cooker
+                </button>
+
+                <button onclick="setProduct('Water Bottle')">
+                    Water Bottle
+                </button>
+
+            </div>
+
+
+            <div id="standardResult"></div>
+
+        </div>
+
+
+
+        <!-- CERTIFICATION ROADMAP -->
+
+        <div class="roadmap-section">
+
+            <h2>📋 Certification Roadmap</h2>
+
+
+            <div class="roadmap">
+
+                <div class="roadmap-step">
+                    <span>1</span>
+                    Identify Applicable Standard
+                </div>
+
+                <div class="roadmap-step">
+                    <span>2</span>
+                    Check Certification Requirements
+                </div>
+
+                <div class="roadmap-step">
+                    <span>3</span>
+                    Prepare Required Documents
+                </div>
+
+                <div class="roadmap-step">
+                    <span>4</span>
+                    Submit Application
+                </div>
+
+                <div class="roadmap-step">
+                    <span>5</span>
+                    Testing and Inspection
+                </div>
+
+                <div class="roadmap-step">
+                    <span>6</span>
+                    Certification Guidance
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DOCUMENT CHECKLIST -->
+
+        <div class="checklist-section">
+
+            <h2>📄 Document Checklist</h2>
+
+            <p>Select completed items:</p>
+
+
+            <label>
+                <input type="checkbox">
+                Business Information
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Product Details
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Manufacturing Information
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Testing Documents
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Application Documents
+            </label>
+
+        </div>
+
+
+
+        <!-- INDUSTRY CHATBOT -->
+
+        <h2 class="sub-heading">
+            🤖 Industry AI Assistant
+        </h2>
+
+
+        <div class="chatbot">
+
+            <div class="chat-header">
+
+                <div class="chat-icon">🤖</div>
+
+                <div>
+                    <h3>Industry SmartGuide AI</h3>
+                    <p>Industry Compliance Assistant</p>
+                </div>
+
+            </div>
+
+
+            <div id="industryMessages" class="chat-messages">
+
+                <div class="message ai-message">
+
+                    Hello! 🏭
+
+                    I can help you understand:
+
+                    • Product standards<br>
+                    • Certification guidance<br>
+                    • Documents<br>
+                    • Compliance processes
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="industryInput"
+                    placeholder="Ask an industry question..."
+                >
+
+                <button onclick="sendIndustryMessage()">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="warning">
+
+            ⚠️ This is a prototype.
+            Always verify current standards and certification
+            requirements using official BIS sources.
+
+        </div>
+
+    </section>
+
+<!-- DATASET SECTION -->
+
+<section id="dataset" class="dataset-section">
+
+    <div class="section-heading">
+
+        <h1>📊 Prototype Knowledge Dataset</h1>
+
+        <p>
+            Sample data used by BIS SmartGuide AI
+            for demonstration and prototype purposes.
+        </p>
+
+    </div>
+
+
+    <div class="dataset-info">
+
+        <div class="dataset-card">
+
+            <div class="card-icon">📦</div>
+
+            <h3>Product Dataset</h3>
+
+            <p>
+                Contains sample product categories
+                and prototype standard information.
+            </p>
+
+            <strong>Products: 8</strong>
+
+        </div>
+
+
+        <div class="dataset-card">
+
+            <div class="card-icon">💬</div>
+
+            <h3>Question Dataset</h3>
+
+            <p>
+                Contains common consumer and
+                industry-related BIS questions.
+            </p>
+
+            <strong>Sample Questions: 20+</strong>
+
+        </div>
+
+
+        <div class="dataset-card">
+
+            <div class="card-icon">📚</div>
+
+            <h3>Knowledge Categories</h3>
+
+            <p>
+                Standards, certification,
+                ISI marks, hallmarking and
+                compliance guidance.
+            </p>
+
+            <strong>Categories: 5</strong>
+
+        </div>
+
+    </div>
+
+
+    <div class="dataset-table-container">
+
+        <h2>Sample Product Knowledge</h2>
+
+        <table class="dataset-table">
+
+            <thead>
+
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Prototype Status</th>
+                    <th>Guidance</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody id="datasetTable">
+
+                <!-- JavaScript will add data here -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <div class="warning">
+
+        ⚠️ The information shown in this dataset
+        is sample prototype data.
+
+        It should not be treated as official
+        BIS certification or compliance information.
+
+        Final data should be verified using
+        official BIS sources.
+
+    </div>
+
+</section>
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about-section">
+
+        <h1>
+            About BIS SmartGuide AI
+        </h1>
+
+        <p>
+            BIS SmartGuide AI is an AI-powered prototype
+            designed to make information about Indian Standards
+            and BIS services easier to understand for consumers
+            and industries.
+        </p>
+
+
+        <div class="card-grid">
+
+            <div class="info-card">
+
+                <div class="card-icon">🌐</div>
+
+                <h3>Accessible</h3>
+
+                <p>
+                    Easy-to-understand information.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-icon">🧠</div>
+
+                <h3>Intelligent</h3>
+
+                <p>
+                    AI-powered guidance.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="card-icon">🛡️</div>
+
+                <h3>Trusted</h3>
+
+                <p>
+                    Designed around verified information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>🤖 BIS SmartGuide AI</h3>
+
+        <p>
+            AI-powered guidance for Indian Standards
+            and BIS services.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
